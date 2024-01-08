@@ -41,9 +41,9 @@ const Home = () => {
             penjualan: 3000,
           },
           {
-            customId: "syarif_bsa",
+            customId: "syarif_jufri",
             customParentId: "syarif_segaf",
-            customName: "Syarif BSA",
+            customName: "Syarif Jufri",
             customImage: "/img/p1.png",
             penjualan: 1030,
           },

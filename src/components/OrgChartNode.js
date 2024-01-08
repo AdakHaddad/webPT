@@ -8,44 +8,6 @@ const OrgChartNode = ({ data }) => {
   const chartRef = useRef();
 
   useEffect(() => {
-    const data = [
-      {
-        customId: "rabithah_alawiyah",
-        customParentId: null,
-        customName: "Rabithah Alawiyah",
-        customImage: "/img/logo.png",
-        penjualan: "123",
-      },
-      {
-        customId: "alamin_yogyakarta",
-        customParentId: "rabithah_alawiyah",
-        customName: "Alamin Yogyakarta",
-        customImage: "/img/logo.png",
-        penjualan: "123",
-      },
-      {
-        customId: "syubban_ra",
-        customParentId: "rabithah_alawiyah",
-        customName: "Syubban RA",
-        customImage: "/img/logo.png",
-        penjualan: "123",
-      },
-      {
-        customId: "asyraaf_uipnj",
-        customParentId: "rabithah_alawiyah",
-        customName: "Asyraaf UIPNJ",
-        customImage: "/img/logo.png",
-        penjualan: "123",
-      },
-      {
-        customId: "pemuda_rabithah_malang",
-        customParentId: "rabithah_alawiyah",
-        customName: "Pemuda Rabithah Malang",
-        customImage: "/img/logo.png",
-        penjualan: "100",
-      },
-    ];
-
     const drawChart = () => {
       const orgChart = new OrgChart()
         .nodeHeight((node) => 85 + 25)

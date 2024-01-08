@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "cva",
+=======
+  "name": "my-app",
+>>>>>>> 9c11cd0eb8790e0ccacc9cb74d728f8d4cf8b3de
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react": "^18",
     "react-dom": "^18",
     "next": "14.0.4"
@@ -19,5 +24,19 @@
     "tailwindcss": "^3.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.4"
+=======
+    "@headlessui/react": "^1.7.17",
+    "autoprefixer": "10.4.16",
+    "d3-flextree": "^2.1.2",
+    "d3-org-chart": "^3.1.1",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.0.4",
+    "next": "14.0.4",
+    "next-themes": "^0.2.1",
+    "postcss": "8.4.32",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.4.0"
+>>>>>>> 9c11cd0eb8790e0ccacc9cb74d728f8d4cf8b3de
   }
 }

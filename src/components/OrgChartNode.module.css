@@ -1,0 +1,40 @@
+/* components/OrgChartNode.module.css */
+.chart-container {
+  color: #4caf50;
+  width: 120px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+}
+.node {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.nodeName {
+  font-weight: bold;
+}
+
+.children {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.line {
+  flex: 1;
+  border: 1px solid #ccc;
+}
+
+/* Add a pseudo-element for vertical lines */

@@ -4,11 +4,80 @@ import { OrgChart } from "d3-org-chart";
 import "d3-flextree";
 import styles from "./OrgChartNode.module.css";
 
-const OrgChartNode = ({ data }) => {
+const OrgChartNode = () => {
+  const data = [
+    {
+      customId: "Manager",
+      customParentId: null,
+      customName: "Manager",
+      customImage: "/img/p.png",
+      penjualan: 1999,
+    },
+    {
+      customId: "alan",
+      customParentId: "Manager",
+      customName: "Alan",
+      customImage: "/img/p.png",
+      penjualan: 1945,
+    },
+    {
+      customId: "steve",
+      customParentId: "Manager",
+      customName: "Steve",
+      customImage: "/img/p1.png",
+      penjualan: 2000,
+    },
+    {
+      customId: "karen",
+      customParentId: "Manager",
+      customName: "Karen",
+      customImage: "/img/p2.png",
+      penjualan: 3000,
+    },
+    {
+      customId: "bob",
+      customParentId: "Manager",
+      customName: "Bob",
+      customImage: "/img/p1.png",
+      penjualan: 1000,
+    },
+    {
+      customId: "andy",
+      customParentId: "Manager",
+      customName: "Andy",
+      customImage: "/img/p.png",
+      penjualan: 4998,
+    },
+
+    {
+      customId: "John_Doe",
+      customParentId: "Manager",
+      customName: "John Doe",
+      customImage: "/img/p.png",
+      penjualan: 1500,
+    },
+    {
+      customId: "suga",
+      customParentId: "bob",
+      customName: "Suga",
+      customImage: "/img/p1.png",
+      penjualan: 2500,
+    },
+    {
+      customId: "Nur",
+      customParentId: "bob",
+      customName: "Nur",
+      customImage: "/img/p2.png",
+      penjualan: 2500,
+    },
+  ];
   const chartRef = useRef();
 
   useEffect(() => {
     const drawChart = () => {
+      data.forEach((member, index) => {
+        member.batch_number = String(index + 1).padStart(7, "0"); // 7 digits with leading zeros
+      });
       const orgChart = new OrgChart()
         .nodeHeight((node) => 85 + 25)
         .nodeWidth((node) => 220 + 2)
@@ -39,6 +108,9 @@ const OrgChartNode = ({ data }) => {
                 </div>
                 <div style="font-size: 12px; color:#08011E; margin - left: 20px; margin - top: 5px">
                   Penjualan: ${node.data.penjualan}
+                </div>
+                <div style="font-size: 12px; color:#08011E; margin - left: 20px; margin - top: 5px">
+                  Batch Number: ${node.data.batch_number}
                 </div>
               </div>
             </div>`;

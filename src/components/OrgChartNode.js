@@ -34,7 +34,7 @@ const OrgChartNode = ({ data }) => {
                     node.data.customImage
                   } style="margin-left:${20}px;border-radius:100px;width:40px;height:40px;" />
                 </div>
-                <div style="font-size:15px;color:#08011E;margin-left:20px;margin-top:10px">
+                <div class="bold" style="font-size:15px;color:#08011E;margin-left:20px;margin-top:10px">
                   ${node.data.customName}
                 </div>
                 <div style="font-size: 12px; color:#08011E; margin - left: 20px; margin - top: 5px">

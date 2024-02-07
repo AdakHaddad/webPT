@@ -1,27 +1,35 @@
-// components/Login.js
-"use client";
-
 import React, { useState } from "react";
+import firebase from "firebase/app";
+import "firebase/auth";
 
-const Login = ({ onLogin }) => {
-  const [customId, setCustomId] = useState();
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    if (customId.trim() !== "") {
-      onLogin(customId.trim());
+  const handleLogin = async () => {
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, password);
+      // Successfully logged in
+    } catch (error) {
+      console.error("Login error:", error.message);
     }
   };
 
   return (
     <div>
-      <label>
-        Enter Your customId:
-        <input
-          type="text"
-          value={customId}
-          onChange={(e) => setCustomId(e.target.value)}
-        />
-      </label>
+      <h2>Login</h2>
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
       <button onClick={handleLogin}>Login</button>
     </div>
   );
